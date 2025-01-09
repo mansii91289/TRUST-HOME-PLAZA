@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import {
-  getDownloadURL, 
+  getDownloadURL,
   getStorage,
   ref,
   uploadBytesResumable,
@@ -14,7 +14,7 @@ export default function CreateListing() {
   const navigate = useNavigate();
   const [files, setFiles] = useState([]);
   const [formData, setFormData] = useState({
-    imageUrls: ["https://cdn.wallpapersafari.com/55/81/4JzYFU.jpg","http://1.bp.blogspot.com/-KLyTSXe2c30/TwNZoGE51nI/AAAAAAAACQQ/lwMv4bjlaMs/s1600/Luxury+Houses+7.jpg","https://blog.stkimg.com/media/2023/02/07102133/Travis-Kelce-House-Kansas-City-1.jpg","https://plus.unsplash.com/premium_photo-1661964014750-963a28aeddea?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D","https://images.unsplash.com/photo-1487975460695-a2e5c4ea12c9?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzV8fGhvdXNlfGVufDB8fDB8fHww","https://images.unsplash.com/photo-1560807707-8cc777a4d1f8?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzV8fGhvdXNlfGVufDB8fDB8fHww","https://images.unsplash.com/photo-1472224371017-08207f84aaae?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGhvdXNlfGVufDB8fDB8fHww","https://images.unsplash.com/photo-1510798831971-661eb04b3739?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8aG91c2V8ZW58MHx8MHx8fDA%3D","https://www.wavecitycenter.in/wp-content/uploads/2016/10/Featured-2-1.jpg"],
+    imageUrls: ["https://cdn.wallpapersafari.com/55/81/4JzYFU.jpg","http://1.bp.blogspot.com/-KLyTSXe2c30/TwNZoGE51nI/AAAAAAAACQQ/lwMv4bjlaMs/s1600/Luxury+Houses+7.jpg","https://blog.stkimg.com/media/2023/02/07102133/Travis-Kelce-House-Kansas-City-1.jpg","https://plus.unsplash.com/premium_photo-1661964014750-963a28aeddea?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D","https://images.unsplash.com/photo-1487975460695-a2e5c4ea12c9?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzV8fGhvdXNlfGVufDB8fDB8fHww","https://images.unsplash.com/photo-1472224371017-08207f84aaae?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGhvdXNlfGVufDB8fDB8fHww","https://images.unsplash.com/photo-1510798831971-661eb04b3739?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8aG91c2V8ZW58MHx8MHx8fDA%3D","https://www.wavecitycenter.in/wp-content/uploads/2016/10/Featured-2-1.jpg"],
     name: '',
     description: '',
     address: '',
@@ -138,7 +138,7 @@ export default function CreateListing() {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-          ...formData,     
+          ...formData,
           userRef: currentUser._id,
         }),
       });

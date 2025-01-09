@@ -6,10 +6,10 @@ export default function ListingItem({ listing }) {
     <div className='bg-white shadow-md hover:shadow-lg transition-shadow overflow-hidden rounded-lg w-full sm:w-[330px]'>
       <Link to={`/listing/${listing._id}`}>
         <img
-          src={ 
+          src={
             listing.imageUrls[0] ||
-            'https://blog.phixer.net/wp-content/uploads/2017/09/21.jpg'
-          } 
+            'https://photos.zillowstatic.com/p_e/ISu0cikv0u9be71000000000.jpg'
+          }
           alt='listing cover'
           className='h-[320px] sm:h-[220px] w-full object-cover hover:scale-105 transition-scale duration-300'
         />

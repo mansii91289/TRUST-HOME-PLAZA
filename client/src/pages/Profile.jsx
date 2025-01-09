@@ -176,7 +176,6 @@ export default function Profile() {
           ref={fileRef}
           hidden
           accept='image/*'
-          
         />
         <img
           onClick={() => fileRef.current.click()}
