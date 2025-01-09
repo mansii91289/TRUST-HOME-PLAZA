@@ -7,7 +7,7 @@ import {
   uploadBytesResumable,
 } from 'firebase/storage';
 import { app } from '../firebase';
-import { Cloudinary } from '@cloudinary/url-gen';
+
 import {
   updateUserStart,
   updateUserSuccess,
